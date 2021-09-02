@@ -9,6 +9,7 @@ using Discord.Addons.Interactive;
 using Discord.Commands;
 using Discord.WebSocket;
 using System.Reflection;
+using System.IO;
 
 namespace KyteBot
 {
@@ -19,8 +20,10 @@ namespace KyteBot
         private DiscordSocketClient _client;
         private CommandService _commands;
         private IServiceProvider _services;
+        string token = File.ReadAllText("token.ignore");
         public async Task RunBotAsync()
         {
+            Console.WriteLine(token);
             _client = new DiscordSocketClient();
             _commands = new CommandService();
 
