@@ -16,7 +16,7 @@ Searches the internet for search query
 
 Bans a user for given reason
 
-### !Unban {user} {reason}
+### !Unban {user} {reason} // not working
 
 Unban a user for given reason
 
