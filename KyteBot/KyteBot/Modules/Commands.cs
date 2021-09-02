@@ -149,16 +149,19 @@ namespace KyteBot.Modules
             if (search == null) search = "Not specified search query";
 
             await Context.Message.DeleteAsync();
+            string cleansearch = search;
 
             search = search.Replace(" ", "+");
 
             var EmbedBuilder = new EmbedBuilder
             {
                 Title = $"{user} asked to search",
-                Description = $"https://duckduckgo.com/?t=ffab&q=" + search
+                Description = $"https://duckduckgo.com/?t=ffab&q=" + cleansearch
             };
-            EmbedBuilder.AddField($"{user} searched", $"{search}", true)
-            .WithDescription($"Nickname: {user.Mention}")
+            string endsearch = $"https://duckduckgo.com/?t=ffab&q=" + search;
+
+            EmbedBuilder.AddField($"{user} searched", $"{cleansearch}", true)
+            .WithDescription(endsearch + $" was searched by: {user.Mention}")
             .WithCurrentTimestamp()
             .WithUrl($"https://duckduckgo.com/?t=ffab&q=" + search);
             Embed embed = EmbedBuilder.Build();
