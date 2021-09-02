@@ -34,3 +34,6 @@ F:\Outside University Game Dev Stuff\Codey Stuff\KyteBot\KyteBot\KyteBot\obj\Deb
 F:\Outside University Game Dev Stuff\Codey Stuff\KyteBot\KyteBot\KyteBot\obj\Debug\KyteBot.csproj.CopyComplete
 F:\Outside University Game Dev Stuff\Codey Stuff\KyteBot\KyteBot\KyteBot\obj\Debug\KyteBot.exe
 F:\Outside University Game Dev Stuff\Codey Stuff\KyteBot\KyteBot\KyteBot\obj\Debug\KyteBot.pdb
+F:\Outside University Game Dev Stuff\Codey Stuff\KyteBot\KyteBot\KyteBot\bin\Debug\Discord.Addons.Interactive.dll
+F:\Outside University Game Dev Stuff\Codey Stuff\KyteBot\KyteBot\KyteBot\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+F:\Outside University Game Dev Stuff\Codey Stuff\KyteBot\KyteBot\KyteBot\bin\Debug\System.Diagnostics.DiagnosticSource.xml

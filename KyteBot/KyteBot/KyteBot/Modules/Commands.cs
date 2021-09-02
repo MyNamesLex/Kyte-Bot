@@ -190,6 +190,18 @@ namespace KyteBot.Modules
             Embed embed = EmbedBuilder.Build();
             await ReplyAsync(embed: embed);
         }
+
+        [Command("help")]
+        public async Task help()
+        {
+            var EmbedBuilder = new EmbedBuilder
+            {
+                Title = $"Help",
+                Description = $"!RNG, !Search, !Unban, !Kick, !Ban, !Ping", 
+            };
+            Embed embed = EmbedBuilder.Build();
+            await ReplyAsync(embed: embed);
+        }
     }
 }
 
