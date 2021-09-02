@@ -12,7 +12,7 @@ using System.Net;
 
 namespace KyteBot.Modules
 {
-    public class Commands : ModuleBase<SocketCommandContext>
+    public class Commands : InteractiveBase
     {
         [Command("Ping")]
         public async Task Ping()
@@ -168,24 +168,6 @@ namespace KyteBot.Modules
 
         }
 
-        [Command("RNG")]
-        public async Task rng()
-        {
-            Random r = new Random();
-            int genrandom = r.Next(1, 10);
-            Console.WriteLine("Random Number = " + genrandom);
-
-            var EmbedBuilder = new EmbedBuilder
-            {
-                Title = $"RNG = {genrandom} ",
-            };
-
-            EmbedBuilder.AddField($"{genrandom}", true)
-            .WithCurrentTimestamp();
-            Embed embed = EmbedBuilder.Build();
-            await ReplyAsync(embed: embed);
-        }
-
         [Command("help")]
         public async Task help()
         {
@@ -196,6 +178,33 @@ namespace KyteBot.Modules
             };
             Embed embed = EmbedBuilder.Build();
             await ReplyAsync(embed: embed);
+        }
+
+        [Command("rng", RunMode = RunMode.Async)]
+        public async Task RNGFunction()
+        {
+            Random r = new Random();
+            int GenerateRandom = r.Next(1, 10);
+            await ReplyAsync("I have come up with a number between 1 and 10, try guess it!");
+            await RNGLoop(GenerateRandom);
+        }
+
+        public async Task RNGLoop(int GenerateRandom)
+        {
+            var response = await NextMessageAsync();
+            Console.WriteLine(response);
+            
+            if (response.ToString() == GenerateRandom.ToString())
+            {
+                await ReplyAsync("Correct!");
+                return;
+            }
+            else
+            {
+                await ReplyAsync("Incorrect!");
+                await RNGLoop(GenerateRandom);
+            }
+            
         }
     }
 }

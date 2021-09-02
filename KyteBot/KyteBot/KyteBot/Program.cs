@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 using Discord;
+using Discord.Addons.Interactive;
 using Discord.Commands;
 using Discord.WebSocket;
 using System.Reflection;
@@ -19,22 +20,23 @@ namespace KyteBot
         private CommandService _commands;
         private IServiceProvider _services;
         public async Task RunBotAsync()
-        { 
-
+        {
             _client = new DiscordSocketClient();
             _commands = new CommandService();
 
             _services = new ServiceCollection()
                 .AddSingleton(_client)
+                .AddSingleton<InteractiveService>()
                 .AddSingleton(_commands)
                 .BuildServiceProvider();
 
             _client.Log += _client_Log;
-
-            await RegisterCommandsAsync();
-
             await _client.LoginAsync(TokenType.Bot, token);
+            await _client.StartAsync();
 
+            _commands = new CommandService();
+            await RegisterCommandsAsync();
+            
             await _client.StartAsync();
 
             await Task.Delay(-1);
