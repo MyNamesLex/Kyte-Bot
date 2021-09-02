@@ -2,13 +2,11 @@
 using System.Resources;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Net.WebSockets;
 using System.Threading.Tasks;
 using Discord;
 using Discord.Commands;
 using Discord.Addons.Interactive;
-using System.Net;
 
 namespace KyteBot.Modules
 {

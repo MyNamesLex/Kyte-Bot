@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 using Discord;
@@ -23,7 +22,6 @@ namespace KyteBot
         string token = File.ReadAllText("token.ignore");
         public async Task RunBotAsync()
         {
-            Console.WriteLine(token);
             _client = new DiscordSocketClient();
             _commands = new CommandService();
 
