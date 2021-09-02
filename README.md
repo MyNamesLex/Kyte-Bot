@@ -4,7 +4,7 @@ Developing a better discord bot for fun
 
 ## Commands
 
-### !help
+### !Help
 
 Generates all commands options
 
