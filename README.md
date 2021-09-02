@@ -1,8 +1,12 @@
 # Kyte-Bot
 
-Developing a better discord bot then what I had before, !help to see commands
+Developing a better discord bot for fun
 
 ## Commands
+
+###!help
+
+Generates all commands options
 
 ### !RNG
 
