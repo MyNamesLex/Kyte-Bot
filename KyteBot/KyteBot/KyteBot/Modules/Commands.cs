@@ -1,10 +1,14 @@
 ﻿using System;
+using System.Resources;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Net.WebSockets;
 using System.Threading.Tasks;
 using Discord;
 using Discord.Commands;
+using Discord.Addons.Interactive;
+using System.Net;
 
 namespace KyteBot.Modules
 {
@@ -72,15 +76,13 @@ namespace KyteBot.Modules
 
             var EmbedBuilder = new EmbedBuilder
             {
-                //Title = $"{user} was kicked",
-                //Description = $"**Reason** {reason}"
+                Title = $"{user} was kicked",
+                Description = $"**Reason** {reason}"
             };
             EmbedBuilder.AddField($"{user} was kicked", $"**Reason:** {reason}", true)
             .WithDescription($"Nickname: {user.Mention}")
             .WithThumbnailUrl("//Icon URL here")
             .WithCurrentTimestamp();
-            Embed embed = EmbedBuilder.Build();
-            await ReplyAsync(embed: embed);
 
             ITextChannel logChannel = Context.Client.GetChannel(882790764751495170) as ITextChannel;
             var EmbedBuilderLog = new EmbedBuilder
@@ -113,8 +115,8 @@ namespace KyteBot.Modules
 
             var EmbedBuilder = new EmbedBuilder
             {
-                //Title = $"{user} was kicked",
-                //Description = $"**Reason** {reason}"
+                Title = $"{user} was unbanned",
+                Description = $"**Reason** {reason}"
             };
             EmbedBuilder.AddField($"{user} was unbanned", $"**Reason:** {reason}", true)
             .WithDescription($"Nickname: {user.Mention}")
@@ -136,6 +138,57 @@ namespace KyteBot.Modules
             await logChannel.SendMessageAsync(embed: embedLog);
 
             await Context.Guild.RemoveBanAsync(user);
+        }
+
+        [Command("Search")]
+        public async Task search(IGuildUser user = null, [Remainder] string search = null)
+        {
+            if (user == null)
+            {
+                await ReplyAsync("Please specify a user!");
+                return;
+            }
+            if (search == null) search = "Not specified search query";
+
+            await Context.Message.DeleteAsync();
+
+            var EmbedBuilder = new EmbedBuilder
+            {
+                Title = $"{user} asked to search",
+                Description = $"{search}"
+            };
+            EmbedBuilder.AddField($"{user} searched", $"{search}", true)
+            .WithDescription($"Nickname: {user.Mention}")
+            .WithCurrentTimestamp();
+            Embed embed = EmbedBuilder.Build();
+            await ReplyAsync(embed: embed);
+
+        }
+        /*
+        [Command("ChangePrefix")]
+        [RequireUserPermission(GuildPermission.Administrator, ErrorMessage = "You don't have permission: Admin");
+        public async Task changeprefix(IGuildUser user = null, [Remainder] string newprefix = null)
+        {
+            
+        }
+        */
+
+        [Command("RNG")]
+        public async Task rng()
+        {
+            Random r = new Random();
+            int genrandom = r.Next(1, 10);
+            Console.WriteLine("Random Number = " + genrandom);
+
+            var EmbedBuilder = new EmbedBuilder
+            {
+                Title = $"RNG = {genrandom} ",
+            };
+
+            EmbedBuilder.AddField($"{genrandom}", true)
+            .WithCurrentTimestamp();
+            Embed embed = EmbedBuilder.Build();
+            await ReplyAsync(embed: embed);
         }
     }
 }
