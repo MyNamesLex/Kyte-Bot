@@ -6,7 +6,7 @@ Developing a better discord bot then what I had before, !help to see commands
 
 ### !RNG
 
-Generates a random number
+Generates a random number with the user having to guess the number
 
 ### !Search {user} {searchquery}
 
