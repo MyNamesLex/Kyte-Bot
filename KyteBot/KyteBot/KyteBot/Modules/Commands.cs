@@ -152,6 +152,8 @@ namespace KyteBot.Modules
 
             await Context.Message.DeleteAsync();
 
+            search = search.Replace(" ", "+");
+
             var EmbedBuilder = new EmbedBuilder
             {
                 Title = $"{user} asked to search",
@@ -165,14 +167,6 @@ namespace KyteBot.Modules
             await ReplyAsync(embed: embed);
 
         }
-        /*
-        [Command("ChangePrefix")]
-        [RequireUserPermission(GuildPermission.Administrator, ErrorMessage = "You don't have permission: Admin");
-        public async Task changeprefix(IGuildUser user = null, [Remainder] string newprefix = null)
-        {
-            
-        }
-        */
 
         [Command("RNG")]
         public async Task rng()
