@@ -19,6 +19,7 @@ namespace KyteBot
         private DiscordSocketClient _client;
         private CommandService _commands;
         private IServiceProvider _services;
+        string token = ("ODgyNzc4ODkxNDUyODI1NjIw.YTAV6A.82PWfKJP_-mjVV20VFvglEOrgtM");
         public async Task RunBotAsync()
         {
             _client = new DiscordSocketClient();

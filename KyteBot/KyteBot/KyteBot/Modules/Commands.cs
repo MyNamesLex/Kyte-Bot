@@ -53,7 +53,7 @@ namespace KyteBot.Modules
                {
                    footer
                    .WithText("User Ban Log")
-                    .WithIconUrl("https://i.imgur.com/6Bi17B3.png");
+                   .WithIconUrl("https://i.imgur.com/6Bi17B3.png");
                });
             Embed embedLog = EmbedBuilderLog.Build();
             await logChannel.SendMessageAsync(embed: embedLog);
@@ -183,26 +183,30 @@ namespace KyteBot.Modules
         [Command("rng", RunMode = RunMode.Async)]
         public async Task RNGFunction()
         {
+            int counter = 0;
             Random r = new Random();
             int GenerateRandom = r.Next(1, 10);
             await ReplyAsync("I have come up with a number between 1 and 10, try guess it!");
-            await RNGLoop(GenerateRandom);
+            await RNGLoop(GenerateRandom, counter);
         }
 
-        public async Task RNGLoop(int GenerateRandom)
+        public async Task RNGLoop(int GenerateRandom, int counter)
         {
             var response = await NextMessageAsync();
             Console.WriteLine(response);
             
             if (response.ToString() == GenerateRandom.ToString())
             {
-                await ReplyAsync("Correct!");
+                counter++;
+                await ReplyAsync("Correct! The number was " + GenerateRandom + " You guessed it right in " + counter + " guesses!");
+                Console.WriteLine("Completed");
                 return;
             }
             else
             {
+                counter++;
                 await ReplyAsync("Incorrect!");
-                await RNGLoop(GenerateRandom);
+                await RNGLoop(GenerateRandom, counter);
             }
             
         }
