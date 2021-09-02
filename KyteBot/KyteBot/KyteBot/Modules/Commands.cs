@@ -155,11 +155,12 @@ namespace KyteBot.Modules
             var EmbedBuilder = new EmbedBuilder
             {
                 Title = $"{user} asked to search",
-                Description = $"{search}"
+                Description = $"https://duckduckgo.com/?t=ffab&q=" + search
             };
             EmbedBuilder.AddField($"{user} searched", $"{search}", true)
             .WithDescription($"Nickname: {user.Mention}")
-            .WithCurrentTimestamp();
+            .WithCurrentTimestamp()
+            .WithUrl($"https://duckduckgo.com/?t=ffab&q=" + search);
             Embed embed = EmbedBuilder.Build();
             await ReplyAsync(embed: embed);
 
