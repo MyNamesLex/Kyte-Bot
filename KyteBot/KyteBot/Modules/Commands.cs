@@ -184,7 +184,7 @@ namespace KyteBot.Modules
             int counter = 0;
             Random r = new Random();
             int GenerateRandom = r.Next(1, 10);
-            await ReplyAsync("I have come up with a number between 1 and 10, try guess it!");
+            await ReplyAsync("I have come up with a number between 1 and 10, try guess it! :partying_face:");
             await RNGLoop(GenerateRandom, counter);
         }
 
