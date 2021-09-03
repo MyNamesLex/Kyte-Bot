@@ -277,7 +277,7 @@ namespace KyteBot.Modules
             await ReplyAsync("``State the position you want to start in!\n reply with Pos1 - Pos9``");
             await ReplyAsync("``Pos1|Pos2|Pos3\nPos4|Pos5|Pos6\nPos7|Pos8|Pos9``");
             var message = await NextMessageAsync();
-            message.ToString().ToLower();
+            string mes = message.ToString().ToLower();
             if(xturn == false)
             {
                 xturn = true;
@@ -287,7 +287,7 @@ namespace KyteBot.Modules
                 xturn = false;
             }
             Console.WriteLine(xturn);
-            switch (message.ToString())
+            switch (mes)
             {
                 case "pos1":
                     if (pos1 == "-")
