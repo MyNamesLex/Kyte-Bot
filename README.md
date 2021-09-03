@@ -32,5 +32,6 @@ Kicks a user for given reason
 
 Pings, Kyte Bot replies with 'Pong'
 
-## !ChangePrefix {prefix} //not working
+### !ChangePrefix {prefix} //not working
+
 Changes prefix to whatever you set it to
