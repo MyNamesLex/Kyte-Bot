@@ -20,7 +20,7 @@ Searches the internet for search query
 
 Bans a user for given reason
 
-### !Unban {user} {reason} // not working
+### !Unban {user} {reason} //not working
 
 Unban a user for given reason
 
@@ -31,3 +31,6 @@ Kicks a user for given reason
 ### !Ping
 
 Pings, Kyte Bot replies with 'Pong'
+
+## !ChangePrefix {prefix} //not working
+Changes prefix to whatever you set it to

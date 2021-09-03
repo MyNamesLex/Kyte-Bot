@@ -20,8 +20,11 @@ namespace KyteBot
         private CommandService _commands;
         private IServiceProvider _services;
         string token = File.ReadAllText("token.ignore");
+        public string prefixget = File.ReadAllText("prefix.txt");
+
         public async Task RunBotAsync()
         {
+           Console.WriteLine(File.ReadAllText("prefix.txt"));
             _client = new DiscordSocketClient();
             _commands = new CommandService();
 
@@ -45,24 +48,27 @@ namespace KyteBot
 
         private Task _client_Log(LogMessage arg)
         {
+            Console.WriteLine(File.ReadAllText("prefix.txt"));
             Console.WriteLine(arg);
             return Task.CompletedTask;
         }
 
         public async Task RegisterCommandsAsync()
         {
+            Console.WriteLine(File.ReadAllText("prefix.txt"));
             _client.MessageReceived += HandleCommandAsync;
             await _commands.AddModulesAsync(Assembly.GetEntryAssembly(), _services);
         }
 
         private async Task HandleCommandAsync(SocketMessage arg)
         {
+            Console.WriteLine(File.ReadAllText("prefix.txt"));
             var message = arg as SocketUserMessage;
             var context = new SocketCommandContext(_client, message);
             if (message.Author.IsBot) return;
 
             int argPos = 0;
-            if (message.HasStringPrefix("!", ref argPos))
+            if (message.HasStringPrefix(prefixget, ref argPos))
             {
                 var result = await _commands.ExecuteAsync(context, argPos, _services);
                 if (!result.IsSuccess)
@@ -76,4 +82,5 @@ namespace KyteBot
             }
         }
     }
+
 }
