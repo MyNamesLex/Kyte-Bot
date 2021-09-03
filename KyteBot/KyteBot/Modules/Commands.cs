@@ -159,6 +159,11 @@ namespace KyteBot.Modules
         [Command("Search")]
         public async Task search(IGuildUser user = null, [Remainder] string search = null)
         {
+            if (user == null)
+            {
+                await ReplyAsync("User not specified!");
+                return;
+            }
             if (search == null) search = "Not specified search query";
 
             await Context.Message.DeleteAsync();
