@@ -12,7 +12,7 @@ Generates all commands options
 
 Generates a random number with the user having to guess the number
 
-### !Search {user} {searchquery}
+### !Search {searchquery}
 
 Searches the internet for search query
 

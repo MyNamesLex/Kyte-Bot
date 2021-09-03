@@ -14,7 +14,6 @@ namespace KyteBot.Modules
 {
     public class Commands : InteractiveBase
     {
-        public IUser User;
         public string prefix = File.ReadAllText("prefix.txt");
 
         [Command("Ping")]
@@ -157,13 +156,10 @@ namespace KyteBot.Modules
         }
 
         [Command("Search")]
-        public async Task search(IGuildUser user = null, [Remainder] string search = null)
+        public async Task search([Remainder] string search = null)
         {
-            if (user == null)
-            {
-                await ReplyAsync("User not specified!");
-                return;
-            }
+            //await ReplyAsync($"{ctx.User}");
+
             if (search == null) search = "Not specified search query";
 
             await Context.Message.DeleteAsync();
@@ -173,16 +169,14 @@ namespace KyteBot.Modules
 
             var EmbedBuilder = new EmbedBuilder
             {
-                Title = $"{user} asked to search",
-                Description = $"https://duckduckgo.com/?t=ffab&q=" + cleansearch
+
             };
 
             string endsearch = $"https://duckduckgo.com/?t=ffab&q=" + search;
 
-            EmbedBuilder.AddField($"{user} searched", $"{endsearch}", true)
-            .WithDescription($"``{cleansearch}``" + $" was searched by: {user.Mention}")
-            .WithCurrentTimestamp()
-            .WithUrl($"https://duckduckgo.com/?t=ffab&q=" + search);
+            EmbedBuilder.AddField($"Searched for:", $"{cleansearch}", true)
+            .WithDescription(endsearch)
+            .WithCurrentTimestamp();
 
             Embed embed = EmbedBuilder.Build();
             await ReplyAsync(embed: embed);
