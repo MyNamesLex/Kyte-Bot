@@ -213,7 +213,6 @@ namespace KyteBot.Modules
                 counter++;
                 await ReplyAsync("Correct! The number was " + GenerateRandom + " You guessed it right in " + counter + " guesses!");
                 Console.WriteLine("Completed");
-                counter = 0;
                 return;
             }
             else
