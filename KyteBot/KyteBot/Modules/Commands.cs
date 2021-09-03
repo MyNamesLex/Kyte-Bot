@@ -295,20 +295,20 @@ namespace KyteBot.Modules
                         if (xturn == false)
                         {
                             pos1 = "x";
-                            await CheckForWin(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
                             break;
                         }
                         else
                         {
                             pos1 = "o";
-                            await CheckForWin(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
                             break;
                         }
                     }
                     else
                     {
                         await ReplyAsync("Position taken\n Turn wasted :laughing:");
-                        await CheckForWin(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                        await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
                     }
                     break;
                 case "pos2":
@@ -317,20 +317,20 @@ namespace KyteBot.Modules
                         if (xturn == false)
                         {
                             pos2 = "x";
-                            await CheckForWin(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
                             break;
                         }
                         else
                         {
                             pos2 = "o";
-                            await CheckForWin(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
                             break;
                         }
                     }
                     else
                     {
                         await ReplyAsync("Position taken\n Turn wasted :laughing:");
-                        await CheckForWin(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                        await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
                     }
 
                     break;
@@ -340,20 +340,20 @@ namespace KyteBot.Modules
                         if (xturn == false)
                         {
                             pos3 = "x";
-                            await CheckForWin(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
                             break;
                         }
                         else
                         {
                             pos3 = "o";
-                            await CheckForWin(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
                             break;
                         }
                     }
                     else
                     {
                         await ReplyAsync("Position taken\n Turn wasted :laughing:");
-                        await CheckForWin(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                        await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
                     }
                     break;
                 case "pos4":
@@ -362,20 +362,20 @@ namespace KyteBot.Modules
                         if (xturn == false)
                         {
                             pos4 = "x";
-                            await CheckForWin(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
                             break;
                         }
                         else
                         {
                             pos4 = "o";
-                            await CheckForWin(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
                             break;
                         }
                     }
                     else
                     {
                         await ReplyAsync("Position taken\n Turn wasted :laughing:");
-                        await CheckForWin(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                        await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
                     }
                     break;
                 case "pos5":
@@ -384,20 +384,20 @@ namespace KyteBot.Modules
                         if (xturn == false)
                         {
                             pos5 = "x";
-                            await CheckForWin(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
                             break;
                         }
                         else
                         {
                             pos5 = "o";
-                            await CheckForWin(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
                             break;
                         }
                     }
                     else
                     {
                         await ReplyAsync("Position taken\n Turn wasted :laughing:");
-                        await CheckForWin(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                        await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
                     }
                     break;
                 case "pos6":
@@ -406,20 +406,20 @@ namespace KyteBot.Modules
                         if (xturn == false)
                         {
                             pos6 = "x";
-                            await CheckForWin(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
                             break;
                         }
                         else
                         {
                             pos6 = "o";
-                            await CheckForWin(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
                             break;
                         }
                     }
                     else
                     {
                         await ReplyAsync("Position taken\n Turn wasted :laughing:");
-                        await CheckForWin(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                        await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
                     }
                     break;
                 case "pos7":
@@ -428,20 +428,20 @@ namespace KyteBot.Modules
                         if (xturn == false)
                         {
                             pos7 = "x";
-                            await CheckForWin(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
                             break;
                         }
                         else
                         {
                             pos7 = "o";
-                            await CheckForWin(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
                             break;
                         }
                     }
                     else
                     {
                         await ReplyAsync("Position taken\n Turn wasted :laughing:");
-                        await CheckForWin(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                        await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
                     }
                     break;
                 case "pos8":
@@ -450,20 +450,20 @@ namespace KyteBot.Modules
                         if (xturn == false)
                         {
                             pos8 = "x";
-                            await CheckForWin(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
                             break;
                         }
                         else
                         {
                             pos8 = "o";
-                            await CheckForWin(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
                             break;
                         }
                     }
                     else
                     {
                         await ReplyAsync("Position taken\n Turn wasted :laughing:");
-                        await CheckForWin(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                        await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
                     }
 
                     break;
@@ -473,25 +473,25 @@ namespace KyteBot.Modules
                         if (xturn == false)
                         {
                             pos9 = "x";
-                            await CheckForWin(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
                             break;
                         }
                         else
                         {
                             pos9 = "o";
-                            await CheckForWin(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
                             break;
                         }
                     }
                     else
                     {
                         await ReplyAsync("Position taken\n Turn wasted :laughing:");
-                        await CheckForWin(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                        await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
                     }
                     break;
 
             }
-            await CheckForWin(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
 
         }
 
@@ -506,10 +506,16 @@ namespace KyteBot.Modules
             await ReplyAsync(embed: embed);
             await XOStart(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
         }
+        /*
 
         public async Task CheckForWin(string pos1, string pos2, string pos3, string pos4, string pos5, string pos6, string pos7, string pos8, string pos9, bool xturn)
         {
-            //straight line top
+            Console.WriteLine("checkforwin");
+            await CheckForWinStraightLine(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+        }
+        public async Task CheckForWinStraightLine(string pos1, string pos2, string pos3, string pos4, string pos5, string pos6, string pos7, string pos8, string pos9, bool xturn)
+        {
+            Console.WriteLine("CheckForWinStraightLine");
             if (pos1.Equals(pos2))
             {
                 Console.WriteLine(pos1.Equals(pos2));
@@ -520,27 +526,30 @@ namespace KyteBot.Modules
                     {
                         await ReplyAsync("X Wins!");
                     }
-                    else if(pos1 == "o")
+                    else if (pos1 == "o")
                     {
                         await ReplyAsync("O Wins!");
                         return;
                     }
                     else
                     {
-                        await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                        await CheckForWinStraightMid(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
                     }
                 }
                 else
                 {
-                    await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                    await CheckForWinStraightMid(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
                 }
             }
-            //straight line middle
-            if(pos4.Equals(pos5))
+        }
+        public async Task CheckForWinStraightMid(string pos1, string pos2, string pos3, string pos4, string pos5, string pos6, string pos7, string pos8, string pos9, bool xturn)
+        {
+            Console.WriteLine("CheckForWinStraightMid");
+            if (pos4.Equals(pos5))
             {
-                if(pos4.Equals(pos6))
+                if (pos4.Equals(pos6))
                 {
-                    if(pos4 == "x")
+                    if (pos4 == "x")
                     {
                         await ReplyAsync("X Wins!");
                         return;
@@ -552,44 +561,49 @@ namespace KyteBot.Modules
                     }
                     else
                     {
-                        await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                        await CheckForWinStraightBottom(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
                     }
                 }
                 else
                 {
-                    await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                    await CheckForWinStraightBottom(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
                 }
             }
-
-            //straight line bottom
-            if(pos7.Equals(pos8))
+        }
+        public async Task CheckForWinStraightBottom(string pos1, string pos2, string pos3, string pos4, string pos5, string pos6, string pos7, string pos8, string pos9, bool xturn)
+        {
+            Console.WriteLine("CheckForWinStraightBottom");
+            if (pos7.Equals(pos8))
             {
-                if(pos7.Equals(pos9))
+                if (pos7.Equals(pos9))
                 {
                     if (pos7 == "x")
                     {
                         await ReplyAsync("X Wins!");
                         return;
                     }
-                    else if(pos7 == "o")
+                    else if (pos7 == "o")
                     {
                         await ReplyAsync("O Wins!");
                         return;
                     }
                     else
                     {
-                        await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                        await CheckForWinDiagBottomLeft(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
                     }
                 }
                 else
                 {
-                    await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                    await CheckForWinDiagBottomLeft(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
                 }
             }
-            //diagonal bottomleft to topright
-            if(pos9.Equals(pos5))
+        }
+        public async Task CheckForWinDiagBottomLeft(string pos1, string pos2, string pos3, string pos4, string pos5, string pos6, string pos7, string pos8, string pos9, bool xturn)
+        {
+            Console.WriteLine("CheckForWinDiagBottomLeft");
+            if (pos9.Equals(pos5))
             {
-                if(pos9.Equals(pos1))
+                if (pos9.Equals(pos1))
                 {
                     if (pos9 == "x")
                     {
@@ -602,24 +616,27 @@ namespace KyteBot.Modules
                     }
                     else
                     {
-                        await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                        await CheckForWinDiagBottomRight(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
                     }
                 }
                 else
                 {
-                    await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                    await CheckForWinDiagBottomRight(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
                 }
             }
-            //diagonal topleft to bottom right
-            if(pos1.Equals(pos5))
+        }
+        public async Task CheckForWinDiagBottomRight(string pos1, string pos2, string pos3, string pos4, string pos5, string pos6, string pos7, string pos8, string pos9, bool xturn)
+        {
+            Console.WriteLine("CheckForWinDiagBottomRight");
+            if (pos1.Equals(pos5))
             {
-                if(pos1.Equals(pos9))
+                if (pos1.Equals(pos9))
                 {
-                    if(pos1 == "x")
+                    if (pos1 == "x")
                     {
                         await ReplyAsync("X Wins!");
                     }
-                    else if(pos1 == "o")
+                    else if (pos1 == "o")
                     {
                         await ReplyAsync("O Wins!");
                         return;
@@ -639,6 +656,7 @@ namespace KyteBot.Modules
                 await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
             }
         }
+        */
     }
 }
 
