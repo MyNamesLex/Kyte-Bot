@@ -75,7 +75,7 @@ namespace KyteBot.Modules
                 await ReplyAsync("Please specify a user!");
                 return;
             }
-            if (reason == null) reason = "Not specified";4
+            if (reason == null) reason = "Not specified";
 
             await Context.Message.DeleteAsync();
 
