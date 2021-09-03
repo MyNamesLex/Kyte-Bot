@@ -32,7 +32,7 @@ Kicks a user for given reason
 
 Changes prefix to whatever you set it to, has to be a single value entered
 
-### !XO //not fully working
+### !XO //Can't detect wins
 
 Does a naughts and crosses game
 
