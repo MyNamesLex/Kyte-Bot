@@ -174,8 +174,8 @@ namespace KyteBot.Modules
 
             string endsearch = $"https://duckduckgo.com/?t=ffab&q=" + search;
 
-            EmbedBuilder.AddField($"{user} searched", $"{cleansearch}", true)
-            .WithDescription(endsearch + $" was searched by: {user.Mention}")
+            EmbedBuilder.AddField($"{user} searched", $"{endsearch}", true)
+            .WithDescription($"``{cleansearch}``" + $" was searched by: {user.Mention}")
             .WithCurrentTimestamp()
             .WithUrl($"https://duckduckgo.com/?t=ffab&q=" + search);
 
