@@ -38,4 +38,4 @@ Does a naughts and crosses game
 
 ### !Ping
 
-Pings, Kyte Bot replies with 'Pong'
+Pings Kyte Bot, Kyte Bot replies with 'Pong'
