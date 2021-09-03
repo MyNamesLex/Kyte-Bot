@@ -22,7 +22,7 @@ namespace KyteBot.Modules
         }
 
         [Command("Ban")]
-        [RequireUserPermission(GuildPermission.BanMembers, ErrorMessage = "You don't have the permission ``ban_member``!")]
+        [RequireUserPermission(GuildPermission.BanMembers, ErrorMessage = "You don't have the permission **Ban Members**!")]
         public async Task BanMember(IGuildUser user = null, [Remainder] string reason = null)
         {
             if (user == null)
@@ -67,7 +67,7 @@ namespace KyteBot.Modules
         }
 
         [Command("kick")]
-        [RequireUserPermission(GuildPermission.KickMembers, ErrorMessage = "You don't have the permission **kick member**!")]
+        [RequireUserPermission(GuildPermission.KickMembers, ErrorMessage = "You don't have the permission **Kick Member**!")]
         public async Task KickMember(IGuildUser user = null, [Remainder] string reason = null)
         {
             if (user == null)
@@ -75,7 +75,7 @@ namespace KyteBot.Modules
                 await ReplyAsync("Please specify a user!");
                 return;
             }
-            if (reason == null) reason = "Not specified";
+            if (reason == null) reason = "Not specified";4
 
             await Context.Message.DeleteAsync();
 
