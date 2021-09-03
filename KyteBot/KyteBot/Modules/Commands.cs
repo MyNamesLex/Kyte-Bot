@@ -158,8 +158,6 @@ namespace KyteBot.Modules
         [Command("Search")]
         public async Task search([Remainder] string search = null)
         {
-            //await ReplyAsync($"{ctx.User}");
-
             if (search == null) search = "Not specified search query";
 
             await Context.Message.DeleteAsync();
