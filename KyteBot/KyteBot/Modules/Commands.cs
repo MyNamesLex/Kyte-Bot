@@ -8,11 +8,13 @@ using System.Threading.Tasks;
 using Discord;
 using Discord.Commands;
 using Discord.Addons.Interactive;
+using Discord.WebSocket;
 
 namespace KyteBot.Modules
 {
     public class Commands : InteractiveBase
     {
+        public IUser User;
         public string prefix = File.ReadAllText("prefix.txt");
 
         [Command("Ping")]
@@ -78,7 +80,6 @@ namespace KyteBot.Modules
             if (reason == null) reason = "Not specified";
 
             await Context.Message.DeleteAsync();
-
             var EmbedBuilder = new EmbedBuilder
             {
                 Title = $"{user} was kicked",
@@ -158,17 +159,12 @@ namespace KyteBot.Modules
         [Command("Search")]
         public async Task search(IGuildUser user = null, [Remainder] string search = null)
         {
-            if (user == null)
-            {
-                await ReplyAsync("Please specify a user!");
-                return;
-            }
             if (search == null) search = "Not specified search query";
 
             await Context.Message.DeleteAsync();
 
             string cleansearch = search; // for embed
-            search = search.Replace(" ", "+"); 
+            search = search.Replace(" ", "+");
 
             var EmbedBuilder = new EmbedBuilder
             {
