@@ -246,6 +246,228 @@ namespace KyteBot.Modules
                 await ReplyAsync("Prefix is: " + File.ReadAllText("prefix.txt"));
             }
         }
+
+        [Command("XO", RunMode = RunMode.Async)]
+        public async Task NaughtsCrosses()
+        {
+            bool xturn = false;
+            string pos1 = "-";
+            string pos2 = "-";
+            string pos3 = "-";
+            string pos4 = "-";
+            string pos5 = "-";
+            string pos6 = "-";
+            string pos7 = "-";
+            string pos8 = "-";
+            string pos9 = "-";
+
+            var EmbedBuilder = new EmbedBuilder
+            {
+                Title = "Naughts and Crosses!",
+            }
+            .WithDescription("-|-|-\n-|-|-\n-|-|-");
+
+            Embed embed = EmbedBuilder.Build();
+            await ReplyAsync(embed: embed);
+            await XOStart(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+        }
+
+        public async Task XOStart(string pos1, string pos2, string pos3, string pos4, string pos5, string pos6, string pos7, string pos8, string pos9, bool xturn)
+        {
+            await ReplyAsync("``State the position you want to start in!\n reply with Pos1 - Pos9``");
+            await ReplyAsync("``Pos1|Pos2|Pos3\nPos4|Pos5|Pos6\nPos7|Pos8|Pos9``");
+            var message = await NextMessageAsync();
+            message.ToString().ToLower();
+            if(xturn == false)
+            {
+                xturn = true;
+            }
+            else
+            {
+                xturn = false;
+            }
+            Console.WriteLine(xturn);
+            switch (message.ToString())
+            {
+                case "pos1":
+                    if (pos1 == "-")
+                    {
+                        if (xturn == false)
+                        {
+                            pos1 = "x";
+                        }
+                        else
+                        {
+                            pos1 = "o";
+                        }
+                    }
+                    else
+                    {
+                        await ReplyAsync("Position taken\n Turn wasted :laughing:");
+                        await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                    }
+                    break;
+                case "pos2":
+                    if (pos2 == "-")
+                    {
+                        if (xturn == false)
+                        {
+                            pos2 = "x";
+                        }
+                        else
+                        {
+                            pos2 = "o";
+                        }
+                    }
+                    else
+                    {
+                        await ReplyAsync("Position taken\n Turn wasted :laughing:");
+                        await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                    }
+                   
+                    break;
+                case "pos3":
+                    if (pos3 == "-")
+                    {
+                        if (xturn == false)
+                        {
+                            pos3 = "x";
+                        }
+                        else
+                        {
+                            pos3 = "o";
+                        }
+                    }
+                    else
+                    {
+                        await ReplyAsync("Position taken\n Turn wasted :laughing:");
+                        await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                    }
+                    break;
+                case "pos4":
+                    if (pos4 == "-")
+                    {
+                        if (xturn == false)
+                        {
+                            pos4 = "x";
+                        }
+                        else
+                        {
+                            pos4 = "o";
+                        }
+                    }
+                    else
+                    {
+                        await ReplyAsync("Position taken\n Turn wasted :laughing:");
+                        await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                    }
+                    break;
+                case "pos5":
+                    if (pos5 == "-")
+                    {
+                        if (xturn == false)
+                        {
+                            pos5 = "x";
+                        }
+                        else
+                        {
+                            pos5 = "o";
+                        }
+                    }
+                    else
+                    {
+                        await ReplyAsync("Position taken\n Turn wasted :laughing:");
+                        await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                    }
+                    break;
+                case "pos6":
+                    if (pos6 == "-")
+                    {
+                        if (xturn == false)
+                        {
+                            pos6 = "x";
+                        }
+                        else
+                        {
+                            pos6 = "o";
+                        }
+                    }
+                    else
+                    {
+                        await ReplyAsync("Position taken\n Turn wasted :laughing:");
+                        await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                    }
+                    break;
+                case "pos7":
+                    if (pos7 == "-")
+                    {
+                        if (xturn == false)
+                        {
+                            pos7 = "x";
+                        }
+                        else
+                        {
+                            pos7 = "o";
+                        }
+                    }
+                    else
+                    {
+                        await ReplyAsync("Position taken\n Turn wasted :laughing:");
+                        await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                    }
+                    break;
+                case "pos8":
+                    if (pos8 == "-")
+                    {
+                        if (xturn == false)
+                        {
+                            pos8 = "x";
+                        }
+                        else
+                        {
+                            pos8 = "o";
+                        }
+                    }
+                    else
+                    {
+                        await ReplyAsync("Position taken\n Turn wasted :laughing:");
+                        await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                    }
+
+                    break;
+                case "pos9":
+                    if (pos9 == "-")
+                    {
+                        if (xturn == false)
+                        {
+                            pos9 = "x";
+                        }
+                        else
+                        {
+                            pos9 = "o";
+                        }
+                    }
+                    else
+                    {
+                        await ReplyAsync("Position taken\n Turn wasted :laughing:");
+                        await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                    }
+                    break;
+            }
+            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+        }
+
+        public async Task DrawBoard(string pos1, string pos2, string pos3, string pos4, string pos5, string pos6, string pos7, string pos8, string pos9, bool xturn)
+        {
+            var EmbedBuilder = new EmbedBuilder
+            {
+                Title = "Naughts and Crosses!",
+            }
+            .WithDescription($"{pos1}" + "|" + $"{pos2}" + "|" + $"{pos3}" + "\n" + $"{pos4}" + "|" + $"{pos5}"  + "|" +  $"{pos6}" + "\n" + $"{pos7}" + "|" + $"{pos8}" + "|" + $"{pos9}");
+            Embed embed = EmbedBuilder.Build();
+            await ReplyAsync(embed: embed);
+            await XOStart(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+        }
     }
 }
 
