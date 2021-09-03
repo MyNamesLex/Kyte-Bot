@@ -272,227 +272,238 @@ namespace KyteBot.Modules
             await XOStart(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
         }
 
+        //XO Board
+
         public async Task XOStart(string pos1, string pos2, string pos3, string pos4, string pos5, string pos6, string pos7, string pos8, string pos9, bool xturn)
         {
-            await ReplyAsync("``State the position you want to start in!\n reply with Pos1 - Pos9``");
+            await ReplyAsync("``State the position you want to start in!\nreply with Pos1 - Pos9``");
             await ReplyAsync("``Pos1|Pos2|Pos3\nPos4|Pos5|Pos6\nPos7|Pos8|Pos9``");
+            await ReplyAsync("``!Stop to stop game``");
             var message = await NextMessageAsync();
             string mes = message.ToString().ToLower();
-            if (xturn == false)
+            if (mes == "!stop")
             {
-                xturn = true;
+                Console.WriteLine("Stopped Game");
+                await ReplyAsync("Stopped Game");
+                return;
             }
             else
             {
-                xturn = false;
+                if (xturn == false)
+                {
+                    xturn = true;
+                }
+                else
+                {
+                    xturn = false;
+                }
+                Console.WriteLine(xturn);
+                switch (mes)
+                {
+                    case "pos1":
+                        if (pos1 == "-")
+                        {
+                            if (xturn == false)
+                            {
+                                pos1 = "x";
+                                await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                                break;
+                            }
+                            else
+                            {
+                                pos1 = "o";
+                                await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                                break;
+                            }
+                        }
+                        else
+                        {
+                            await ReplyAsync("Position taken\n Turn wasted :laughing:");
+                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                        }
+                        break;
+                    case "pos2":
+                        if (pos2 == "-")
+                        {
+                            if (xturn == false)
+                            {
+                                pos2 = "x";
+                                await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                                break;
+                            }
+                            else
+                            {
+                                pos2 = "o";
+                                await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                                break;
+                            }
+                        }
+                        else
+                        {
+                            await ReplyAsync("Position taken\n Turn wasted :laughing:");
+                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                        }
+
+                        break;
+                    case "pos3":
+                        if (pos3 == "-")
+                        {
+                            if (xturn == false)
+                            {
+                                pos3 = "x";
+                                await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                                break;
+                            }
+                            else
+                            {
+                                pos3 = "o";
+                                await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                                break;
+                            }
+                        }
+                        else
+                        {
+                            await ReplyAsync("Position taken\n Turn wasted :laughing:");
+                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                        }
+                        break;
+                    case "pos4":
+                        if (pos4 == "-")
+                        {
+                            if (xturn == false)
+                            {
+                                pos4 = "x";
+                                await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                                break;
+                            }
+                            else
+                            {
+                                pos4 = "o";
+                                await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                                break;
+                            }
+                        }
+                        else
+                        {
+                            await ReplyAsync("Position taken\n Turn wasted :laughing:");
+                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                        }
+                        break;
+                    case "pos5":
+                        if (pos5 == "-")
+                        {
+                            if (xturn == false)
+                            {
+                                pos5 = "x";
+                                await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                                break;
+                            }
+                            else
+                            {
+                                pos5 = "o";
+                                await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                                break;
+                            }
+                        }
+                        else
+                        {
+                            await ReplyAsync("Position taken\n Turn wasted :laughing:");
+                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                        }
+                        break;
+                    case "pos6":
+                        if (pos6 == "-")
+                        {
+                            if (xturn == false)
+                            {
+                                pos6 = "x";
+                                await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                                break;
+                            }
+                            else
+                            {
+                                pos6 = "o";
+                                await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                                break;
+                            }
+                        }
+                        else
+                        {
+                            await ReplyAsync("Position taken\n Turn wasted :laughing:");
+                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                        }
+                        break;
+                    case "pos7":
+                        if (pos7 == "-")
+                        {
+                            if (xturn == false)
+                            {
+                                pos7 = "x";
+                                await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                                break;
+                            }
+                            else
+                            {
+                                pos7 = "o";
+                                await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                                break;
+                            }
+                        }
+                        else
+                        {
+                            await ReplyAsync("Position taken\n Turn wasted :laughing:");
+                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                        }
+                        break;
+                    case "pos8":
+                        if (pos8 == "-")
+                        {
+                            if (xturn == false)
+                            {
+                                pos8 = "x";
+                                await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                                break;
+                            }
+                            else
+                            {
+                                pos8 = "o";
+                                await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                                break;
+                            }
+                        }
+                        else
+                        {
+                            await ReplyAsync("Position taken\n Turn wasted :laughing:");
+                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                        }
+
+                        break;
+                    case "pos9":
+                        if (pos9 == "-")
+                        {
+                            if (xturn == false)
+                            {
+                                pos9 = "x";
+                                await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                                break;
+                            }
+                            else
+                            {
+                                pos9 = "o";
+                                await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                                break;
+                            }
+                        }
+                        else
+                        {
+                            await ReplyAsync("Position taken\n Turn wasted :laughing:");
+                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
+                        }
+                        break;
+
+                }
+                await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
             }
-            Console.WriteLine(xturn);
-            switch (mes)
-            {
-                case "pos1":
-                    if (pos1 == "-")
-                    {
-                        if (xturn == false)
-                        {
-                            pos1 = "x";
-                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
-                            break;
-                        }
-                        else
-                        {
-                            pos1 = "o";
-                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
-                            break;
-                        }
-                    }
-                    else
-                    {
-                        await ReplyAsync("Position taken\n Turn wasted :laughing:");
-                        await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
-                    }
-                    break;
-                case "pos2":
-                    if (pos2 == "-")
-                    {
-                        if (xturn == false)
-                        {
-                            pos2 = "x";
-                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
-                            break;
-                        }
-                        else
-                        {
-                            pos2 = "o";
-                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
-                            break;
-                        }
-                    }
-                    else
-                    {
-                        await ReplyAsync("Position taken\n Turn wasted :laughing:");
-                        await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
-                    }
-
-                    break;
-                case "pos3":
-                    if (pos3 == "-")
-                    {
-                        if (xturn == false)
-                        {
-                            pos3 = "x";
-                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
-                            break;
-                        }
-                        else
-                        {
-                            pos3 = "o";
-                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
-                            break;
-                        }
-                    }
-                    else
-                    {
-                        await ReplyAsync("Position taken\n Turn wasted :laughing:");
-                        await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
-                    }
-                    break;
-                case "pos4":
-                    if (pos4 == "-")
-                    {
-                        if (xturn == false)
-                        {
-                            pos4 = "x";
-                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
-                            break;
-                        }
-                        else
-                        {
-                            pos4 = "o";
-                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
-                            break;
-                        }
-                    }
-                    else
-                    {
-                        await ReplyAsync("Position taken\n Turn wasted :laughing:");
-                        await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
-                    }
-                    break;
-                case "pos5":
-                    if (pos5 == "-")
-                    {
-                        if (xturn == false)
-                        {
-                            pos5 = "x";
-                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
-                            break;
-                        }
-                        else
-                        {
-                            pos5 = "o";
-                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
-                            break;
-                        }
-                    }
-                    else
-                    {
-                        await ReplyAsync("Position taken\n Turn wasted :laughing:");
-                        await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
-                    }
-                    break;
-                case "pos6":
-                    if (pos6 == "-")
-                    {
-                        if (xturn == false)
-                        {
-                            pos6 = "x";
-                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
-                            break;
-                        }
-                        else
-                        {
-                            pos6 = "o";
-                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
-                            break;
-                        }
-                    }
-                    else
-                    {
-                        await ReplyAsync("Position taken\n Turn wasted :laughing:");
-                        await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
-                    }
-                    break;
-                case "pos7":
-                    if (pos7 == "-")
-                    {
-                        if (xturn == false)
-                        {
-                            pos7 = "x";
-                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
-                            break;
-                        }
-                        else
-                        {
-                            pos7 = "o";
-                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
-                            break;
-                        }
-                    }
-                    else
-                    {
-                        await ReplyAsync("Position taken\n Turn wasted :laughing:");
-                        await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
-                    }
-                    break;
-                case "pos8":
-                    if (pos8 == "-")
-                    {
-                        if (xturn == false)
-                        {
-                            pos8 = "x";
-                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
-                            break;
-                        }
-                        else
-                        {
-                            pos8 = "o";
-                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
-                            break;
-                        }
-                    }
-                    else
-                    {
-                        await ReplyAsync("Position taken\n Turn wasted :laughing:");
-                        await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
-                    }
-
-                    break;
-                case "pos9":
-                    if (pos9 == "-")
-                    {
-                        if (xturn == false)
-                        {
-                            pos9 = "x";
-                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
-                            break;
-                        }
-                        else
-                        {
-                            pos9 = "o";
-                            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
-                            break;
-                        }
-                    }
-                    else
-                    {
-                        await ReplyAsync("Position taken\n Turn wasted :laughing:");
-                        await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
-                    }
-                    break;
-
-            }
-            await DrawBoard(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
-
         }
 
         public async Task DrawBoard(string pos1, string pos2, string pos3, string pos4, string pos5, string pos6, string pos7, string pos8, string pos9, bool xturn)
@@ -506,6 +517,8 @@ namespace KyteBot.Modules
             await ReplyAsync(embed: embed);
             await XOStart(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, xturn);
         }
+
+        //Win Checks
         /*
 
         public async Task CheckForWin(string pos1, string pos2, string pos3, string pos4, string pos5, string pos6, string pos7, string pos8, string pos9, bool xturn)
