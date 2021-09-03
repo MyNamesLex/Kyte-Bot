@@ -181,7 +181,6 @@ namespace KyteBot.Modules
 
             Embed embed = EmbedBuilder.Build();
             await ReplyAsync(embed: embed);
-
         }
 
         [Command("help")]
