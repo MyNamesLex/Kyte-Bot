@@ -30,7 +30,7 @@ Kicks a user for given reason
 
 ### !ChangePrefix {prefix}
 
-Changes prefix to whatever you set it to
+Changes prefix to whatever you set it to, has to be a single value entered
 
 ### !Ping
 
