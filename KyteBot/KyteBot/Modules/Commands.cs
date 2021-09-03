@@ -87,7 +87,7 @@ namespace KyteBot.Modules
 
             EmbedBuilder.AddField($"{user} was kicked", $"**Reason:** {reason}", true)
             .WithDescription($"Nickname: {user.Mention}")
-            .WithThumbnailUrl("//Icon URL here")
+            .WithThumbnailUrl("https://i.imgur.com/6Bi17B3.png")
             .WithCurrentTimestamp();
 
             ITextChannel logChannel = Context.Client.GetChannel(882790764751495170) as ITextChannel;
@@ -100,6 +100,7 @@ namespace KyteBot.Modules
 
             EmbedBuilderLog.AddField("The kick was issued by", $"**Moderator:** {Context.User.Mention}", true)
             .WithDescription($"Nickname: {user.Mention}\n Reason: {reason}")
+            .WithThumbnailUrl("https://i.imgur.com/6Bi17B3.png")
             .WithCurrentTimestamp();
 
             Embed embedLog = EmbedBuilderLog.Build();
@@ -130,7 +131,7 @@ namespace KyteBot.Modules
 
             EmbedBuilder.AddField($"{user} was unbanned", $"**Reason:** {reason}", true)
             .WithDescription($"Nickname: {user.Mention}")
-            .WithThumbnailUrl("//Icon URL here")
+            .WithThumbnailUrl("https://i.imgur.com/6Bi17B3.png")
             .WithCurrentTimestamp();
 
             Embed embed = EmbedBuilder.Build();
