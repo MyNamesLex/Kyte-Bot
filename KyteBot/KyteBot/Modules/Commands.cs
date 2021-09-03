@@ -259,7 +259,7 @@ namespace KyteBot.Modules
             string pos6 = "-";
             string pos7 = "-";
             string pos8 = "-";
-            string pos9 = "-";
+            string pos9 = "-"; 
 
             var EmbedBuilder = new EmbedBuilder
             {
