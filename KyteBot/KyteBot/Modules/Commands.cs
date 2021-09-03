@@ -229,16 +229,24 @@ namespace KyteBot.Modules
         [RequireUserPermission(GuildPermission.Administrator, ErrorMessage = "You don't have the permission **Admin**!")]
         public async Task ChangePrefixFunction(string newprefix)
         {
-            Console.WriteLine(File.ReadAllText("prefix.txt"));
+            if (newprefix.Length == 1)
+            {
+                Console.WriteLine(File.ReadAllText("prefix.txt"));
 
-            string path = "prefix.txt";
+                string path = "prefix.txt";
 
-            File.Create(path).Close();
+                File.Create(path).Close();
 
-            File.WriteAllText(path,newprefix);
-            await ReplyAsync(newprefix + " Is the new prefix!");
+                File.WriteAllText(path, newprefix);
+                await ReplyAsync(newprefix + " Is the new prefix!");
 
-            Console.WriteLine(File.ReadAllText("prefix.txt"));
+                Console.WriteLine(File.ReadAllText("prefix.txt"));
+            }
+            else
+            {
+                await ReplyAsync("Prefix set is too long! Disabling new prefix");
+                await ReplyAsync("Prefix is: " + File.ReadAllText("prefix.txt"));
+            }
         }
     }
 }
