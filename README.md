@@ -28,10 +28,10 @@ Unban a user for given reason
 
 Kicks a user for given reason
 
-### !Ping
-
-Pings, Kyte Bot replies with 'Pong'
-
 ### !ChangePrefix {prefix}
 
 Changes prefix to whatever you set it to
+
+### !Ping
+
+Pings, Kyte Bot replies with 'Pong'
