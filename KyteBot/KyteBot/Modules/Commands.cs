@@ -238,7 +238,7 @@ namespace KyteBot.Modules
                 File.Create(path).Close();
 
                 File.WriteAllText(path, newprefix);
-                await ReplyAsync(newprefix + " Is the new prefix!");
+                await ReplyAsync(newprefix + " Is the new prefix");
 
                 Console.WriteLine(File.ReadAllText("prefix.txt"));
             }
