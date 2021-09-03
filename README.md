@@ -32,6 +32,10 @@ Kicks a user for given reason
 
 Changes prefix to whatever you set it to, has to be a single value entered
 
+### !XO //not fully working
+
+Does a naughts and crosses game
+
 ### !Ping
 
 Pings, Kyte Bot replies with 'Pong'
