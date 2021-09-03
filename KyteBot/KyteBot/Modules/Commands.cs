@@ -265,7 +265,7 @@ namespace KyteBot.Modules
             {
                 Title = "Naughts and Crosses!",
             }
-            .WithDescription("-|-|-\n-|-|-\n-|-|-");
+            .WithDescription("-|-|-\n-|-|-\n-|-|-\n\nPos1|Pos2|Pos3\nPos4|Pos5|Pos6\nPos7|Pos8|Pos9\n\nState the position you want to start in!\nreply with Pos1 - Pos9 !Stop to stop game");
 
             Embed embed = EmbedBuilder.Build();
             await ReplyAsync(embed: embed);
@@ -276,19 +276,27 @@ namespace KyteBot.Modules
 
         public async Task XOStart(string pos1, string pos2, string pos3, string pos4, string pos5, string pos6, string pos7, string pos8, string pos9, bool xturn)
         {
-            await ReplyAsync("``State the position you want to start in!\nreply with Pos1 - Pos9``");
-            await ReplyAsync("``Pos1|Pos2|Pos3\nPos4|Pos5|Pos6\nPos7|Pos8|Pos9``");
-            await ReplyAsync("``!Stop to stop game``");
+            if (xturn == true)
+            {
+                await ReplyAsync("``\n Current Turn: X``");
+            }
+            else
+            {
+                await ReplyAsync("``\n Current Turn: O``");
+            }
             var message = await NextMessageAsync();
             string mes = message.ToString().ToLower();
+
             if (mes == "!stop")
             {
                 Console.WriteLine("Stopped Game");
                 await ReplyAsync("Stopped Game");
                 return;
             }
+
             else
             {
+
                 if (xturn == false)
                 {
                     xturn = true;
