@@ -1,6 +1,6 @@
 # Kyte-Bot
 
-Developing a better discord bot for fun
+Developing a discord bot
 
 ## Commands
 
