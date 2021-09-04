@@ -186,7 +186,7 @@ namespace KyteBot.Modules
             var EmbedBuilder = new EmbedBuilder
             {
                 Title = $"Help",
-                Description = $"!RNG, !Search, !Unban, !Kick, !Ban, !Ping, !ChangePrefix",
+                Description = $"!RNG, !Search, !Unban, !Kick, !Ban, !Ping, !ChangePrefix, !XO",
             };
 
             Embed embed = EmbedBuilder.Build();
