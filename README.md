@@ -1,9 +1,10 @@
 # <p align = "center"> Kyte-Bot </p>
 
+<p align = "center">
 Developing a discord bot that Is better then the one I have done in the past
 
 I chose C# instead of JavaScript because I understand C# better then JavaScript
-
+</p>
 ## Commands
 
 ### !Help
