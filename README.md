@@ -16,9 +16,6 @@ I chose C# instead of JavaScript because I understand C# better then JavaScript
 
 <br>
 <br>
-<br>
-<br>
-<br>
 
 ### !Help
 
