@@ -46,7 +46,7 @@ Kicks a user for given reason
 
 Changes prefix to whatever you set it to, has to be a single value entered
 
-### !XO //can't detect wins
+### !XO //can't detect wins, !stop sometimes doesn't work
 
 Does a naughts and crosses game
 
