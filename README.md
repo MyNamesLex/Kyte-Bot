@@ -2,7 +2,9 @@
 
 <p align = "center">
 Developing a discord bot that Is better then the one I have done in the past
+</p>
 
+<p align = "center">
 I chose C# instead of JavaScript because I understand C# better then JavaScript
 </p>
 
