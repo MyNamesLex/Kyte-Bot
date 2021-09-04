@@ -1,6 +1,8 @@
 # Kyte-Bot
 
-Developing a better discord bot for fun
+Developing a discord bot that Is better then the one I have done in the past
+
+I chose C# instead of JavaScript like I did prior because I know C# better
 
 ## Commands
 
