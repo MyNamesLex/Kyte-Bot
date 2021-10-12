@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.Extensions.DependencyInjection;
-using Discord;
+﻿using Discord;
 using Discord.Addons.Interactive;
 using Discord.Commands;
 using Discord.WebSocket;
-using System.Reflection;
+using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.IO;
+using System.Reflection;
+using System.Threading.Tasks;
 
 namespace KyteBot
 {
@@ -40,7 +38,7 @@ namespace KyteBot
 
             _commands = new CommandService();
             await RegisterCommandsAsync();
-            
+
             await _client.StartAsync();
 
             await Task.Delay(-1);

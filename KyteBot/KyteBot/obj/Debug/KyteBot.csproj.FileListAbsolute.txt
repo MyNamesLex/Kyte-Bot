@@ -73,6 +73,5 @@ F:\Outside University Game Dev Stuff\Codey Stuff\GitHub KyteBot\KyteBot\KyteBot\
 F:\Outside University Game Dev Stuff\Codey Stuff\GitHub KyteBot\KyteBot\KyteBot\bin\Debug\System.Threading.Tasks.Extensions.xml
 F:\Outside University Game Dev Stuff\Codey Stuff\GitHub KyteBot\KyteBot\KyteBot\obj\Debug\KyteBot.csproj.AssemblyReference.cache
 F:\Outside University Game Dev Stuff\Codey Stuff\GitHub KyteBot\KyteBot\KyteBot\obj\Debug\KyteBot.csproj.CoreCompileInputs.cache
-F:\Outside University Game Dev Stuff\Codey Stuff\GitHub KyteBot\KyteBot\KyteBot\obj\Debug\KyteBot.csproj.CopyComplete
 F:\Outside University Game Dev Stuff\Codey Stuff\GitHub KyteBot\KyteBot\KyteBot\obj\Debug\KyteBot.exe
 F:\Outside University Game Dev Stuff\Codey Stuff\GitHub KyteBot\KyteBot\KyteBot\obj\Debug\KyteBot.pdb

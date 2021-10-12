@@ -1,14 +1,9 @@
-﻿using System;
-using System.Resources;
-using System.Collections.Generic;
-using System.Linq;
-using System.IO;
-using System.Net.WebSockets;
-using System.Threading.Tasks;
-using Discord;
-using Discord.Commands;
+﻿using Discord;
 using Discord.Addons.Interactive;
-using Discord.WebSocket;
+using Discord.Commands;
+using System;
+using System.IO;
+using System.Threading.Tasks;
 
 namespace KyteBot.Modules
 {
@@ -259,7 +254,7 @@ namespace KyteBot.Modules
             string pos6 = "-";
             string pos7 = "-";
             string pos8 = "-";
-            string pos9 = "-"; 
+            string pos9 = "-";
 
             var EmbedBuilder = new EmbedBuilder
             {
@@ -678,6 +673,48 @@ namespace KyteBot.Modules
             }
         }
         */
+
+        // 8 ball
+        [Command("8Ball", RunMode = RunMode.Async)]
+        public async Task EightBall()
+        {
+            await ReplyAsync("What's it you want to ask?");
+            var response = await NextMessageAsync();
+            Console.WriteLine(response);
+            Random r = new Random();
+            int rng = r.Next(1, 10);
+            switch (rng)
+            {
+                case 1:
+                    await ReplyAsync("Of Courseee!");
+                    break;
+                case 2:
+                    await ReplyAsync("Definitely Not");
+                    break;
+                case 3:
+                    await ReplyAsync("Yep");
+                    break;
+                case 4:
+                    await ReplyAsync("Sure thing!");
+                    break;
+                case 5:
+                    await ReplyAsync("Your right");
+                    break;
+                case 6:
+                    await ReplyAsync("Maybe");
+                    break;
+                case 7:
+                    await ReplyAsync("Unsure");
+                    break;
+                case 8:
+                    await ReplyAsync("It's inconclusive");
+                    break;
+                default:
+                    await ReplyAsync("It's inconclusive");
+                    break;
+            }
+        }
     }
+
 }
 
