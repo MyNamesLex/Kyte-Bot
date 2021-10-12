@@ -53,3 +53,7 @@ Does a naughts and crosses game
 ### !Ping
 
 Pings Kyte Bot, Kyte Bot replies with 'Pong'
+
+### !8Ball
+
+Generates a random response to a given response
