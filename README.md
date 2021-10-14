@@ -57,3 +57,7 @@ Pings Kyte Bot, Kyte Bot replies with 'Pong'
 ### !8Ball
 
 Generates a random response to a given response
+
+### !GameDevAdvice
+
+Gives game development advice

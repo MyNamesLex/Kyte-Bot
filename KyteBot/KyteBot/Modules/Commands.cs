@@ -181,7 +181,7 @@ namespace KyteBot.Modules
             var EmbedBuilder = new EmbedBuilder
             {
                 Title = $"Help",
-                Description = $"!RNG, !Search, !Unban, !Kick, !Ban, !Ping, !ChangePrefix, !XO",
+                Description = $"!RNG, !Search, !Unban, !Kick, !Ban, !Ping, !ChangePrefix, !XO, !8ball, !GameDevAdvice",
             };
 
             Embed embed = EmbedBuilder.Build();
@@ -217,6 +217,8 @@ namespace KyteBot.Modules
                 await RNGLoop(GenerateRandom, counter);
             }
         }
+
+        //Change Prefix
 
         [Command("ChangePrefix")]
         [RequireUserPermission(GuildPermission.Administrator, ErrorMessage = "You don't have the permission **Admin**!")]
@@ -676,7 +678,7 @@ namespace KyteBot.Modules
 
         // 8 ball
         [Command("8Ball", RunMode = RunMode.Async)]
-        public async Task EightBall()
+        public async Task EightBallFunction()
         {
             await ReplyAsync("What's it you want to ask?");
             var response = await NextMessageAsync();
@@ -711,6 +713,45 @@ namespace KyteBot.Modules
                     break;
                 default:
                     await ReplyAsync("It's inconclusive");
+                    break;
+            }
+        }
+
+        // Game Dev Advice
+
+        [Command("GameDevAdvice")]
+        public async Task CodingAdviceFunction()
+        {
+            Random r = new Random();
+            int rng = r.Next(1, 10);
+            switch (rng)
+            {
+                case 1:
+                    await ReplyAsync("Long if statements are terrible in readability and efficiency, use case switches!");
+                    break;
+                case 2:
+                    await ReplyAsync("Making long comments is a quick way to get people to not like you");
+                    break;
+                case 3:
+                    await ReplyAsync("Good graphics go a long way in making a good first impressions");
+                    break;
+                case 4:
+                    await ReplyAsync("Don't make UI in a rush, good UI can make or break an experience");
+                    break;
+                case 5:
+                    await ReplyAsync("Play-testers are invaluable in spotting bugs and down sides to a game");
+                    break;
+                case 6:
+                    await ReplyAsync("Think of the player when making a game, how will a person who has never seen your game play?");
+                    break;
+                case 7:
+                    await ReplyAsync("If your stuck on a problem, take a break and come back to it with a fresh mind, a walk outside helps a lot!");
+                    break;
+                case 8:
+                    await ReplyAsync("Make games you will like to play");
+                    break;
+                case 9:
+                    await ReplyAsync("If your burnt out and not enjoying developing the game, leave the project for a while and come back when your excited to make it");
                     break;
             }
         }
