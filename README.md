@@ -17,7 +17,7 @@ Generates all commands options
 
 ### !Ping
 
-Pings KyteBot, KyteBot replies with 'Pong', good test too see if it's online'
+Pings KyteBot, KyteBot replies with 'Pong', good test too see if it's online!
 
 ### !RNG
 

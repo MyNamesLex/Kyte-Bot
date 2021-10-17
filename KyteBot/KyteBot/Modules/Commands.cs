@@ -201,7 +201,6 @@ namespace KyteBot.Modules
         public async Task RNGLoop(int GenerateRandom, int counter)
         {
             var response = await NextMessageAsync();
-            Console.WriteLine(response);
 
             if (response.ToString() == GenerateRandom.ToString())
             {
@@ -529,7 +528,6 @@ namespace KyteBot.Modules
         {
             await ReplyAsync("What's it you want to ask?");
             var response = await NextMessageAsync();
-            Console.WriteLine(response);
             Random r = new Random();
             int rng = r.Next(1, 10);
             switch (rng)
