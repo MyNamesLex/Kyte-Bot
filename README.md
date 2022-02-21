@@ -2,7 +2,7 @@
 
 <br>
 <p align = "center">
-Developing a discord bot for fun!
+Developing a discord bot for fun using C#!
 </p>
 
 
